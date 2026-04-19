@@ -1,0 +1,8 @@
+{
+  "short_name": "Lost & Found",
+  "name": "Lost & Found - Item Recovery Platform",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1f2937",
+  "background_color": "#1f2937"
+}

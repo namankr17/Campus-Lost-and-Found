@@ -1,0 +1,69 @@
+.confirm-modal {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+
+  h2 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+
+  .confirm-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+
+    button {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+
+      &.cancel-button {
+        background: #e5e7eb;
+        color: #4b5563;
+
+        &:hover {
+          background: #d1d5db;
+        }
+      }
+
+      &.delete-button {
+        background: #dc2626;
+        color: white;
+
+        &:hover {
+          background: #b91c1c;
+        }
+      }
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: #666;
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: #333;
+    }
+  }
+}

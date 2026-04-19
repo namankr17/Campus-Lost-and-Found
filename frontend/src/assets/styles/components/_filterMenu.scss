@@ -1,0 +1,42 @@
+.filter-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  min-width: 250px;
+  z-index: 1000;
+
+  .filter-section {
+    margin-bottom: 16px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+  }
+
+  .apply-filters {
+    width: 100%;
+    padding: 8px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background: #0056b3;
+    }
+  }
+}

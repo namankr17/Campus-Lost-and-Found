@@ -1,0 +1,82 @@
+.home-layout {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  width: 100%;
+
+  .mobile-category-filter {
+    margin-bottom: 1rem;
+
+    .category-select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      background: white;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        border-color: #0095f6;
+      }
+    }
+  }
+
+  .sidebar-right {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 240px 1fr 240px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+
+    .mobile-category-filter {
+      display: none;
+    }
+
+    .sidebar-left,
+    .sidebar-right {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 280px minmax(600px, 2fr) 280px;
+    max-width: 2100px;
+    gap: 4rem;
+    padding: 2rem 4rem;
+  }
+}
+
+.hero-section {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background-image: url("../../images/maze.jpg");
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  h1 {
+    position: relative;
+    color: white;
+    font-size: 3.5rem;
+    text-align: center;
+    padding-top: 120px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}

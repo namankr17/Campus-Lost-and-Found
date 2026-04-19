@@ -1,0 +1,371 @@
+.navbar {
+  background-color: #1f2937;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    .logo {
+      color: #60a5fa;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 0.5rem;
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1f2937;
+    padding: 1rem;
+
+    &.open {
+      display: flex;
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+
+    a,
+    span {
+      color: #e5e7eb;
+      text-decoration: none;
+      padding: 0.75rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+
+      &:hover {
+        color: #60a5fa;
+        cursor: pointer;
+      }
+    }
+    button {
+      background-color: #60a5fa;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #374151;
+    margin: 0 1rem 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+
+    .search-icon {
+      color: #9ca3af;
+      margin-right: 0.5rem;
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      background: none;
+      outline: none;
+      font-size: 0.9rem;
+      color: white;
+
+      &::placeholder {
+        color: #9ca3af;
+      }
+    }
+  }
+
+  .navbar-content {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-menu {
+      display: none;
+    }
+
+    .navbar-content {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      padding: 1rem 2rem 0;
+
+      .logo {
+        color: #60a5fa;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        margin-right: auto;
+      }
+
+      a,
+      span {
+        color: #e5e7eb;
+        text-decoration: none;
+        font-size: 0.9rem;
+
+        &:hover {
+          color: #60a5fa;
+          cursor: pointer;
+        }
+      }
+
+      .icon-wrapper {
+        position: relative;
+        cursor: pointer;
+        padding: 0.5rem;
+        color: #e5e7eb;
+
+        &:hover {
+          color: #60a5fa;
+        }
+
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+
+        .notification-badge {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          background-color: #9c0808;
+          color: white;
+          font-size: 0.75rem;
+          padding: 2px 6px;
+          border-radius: 9999px;
+          min-width: 18px;
+          text-align: center;
+        }
+
+        button {
+          background: none;
+          border: none;
+          color: inherit;
+          cursor: pointer;
+          padding: 0;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .user-profile {
+        display: flex;
+        align-items: center;
+        padding: 0.25rem;
+        border-radius: 8px;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: #374151;
+        }
+
+        .avatar {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .login-signup-button {
+        background-color: #60a5fa;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    .search-bar {
+      width: 90%;
+      margin: 0 auto 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding: 1rem 2rem;
+
+    .navbar-mobile {
+      display: none;
+    }
+
+    .navbar-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      justify-content: space-evenly;
+
+      .logo {
+        color: #60a5fa;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        margin-right: 0;
+      }
+      .logout-button {
+        background: none;
+        border: none;
+        color: #e5e7eb;
+        padding: 0.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: color 0.2s;
+
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+
+        &:hover {
+          color: #60a5fa;
+        }
+
+        @media screen and (min-width: 1440px) {
+          svg {
+            width: 1.8rem;
+            height: 1.8rem;
+          }
+        }
+      }
+
+      a,
+      span {
+        color: #e5e7eb;
+        text-decoration: none;
+        font-size: 0.9rem;
+
+        &:hover {
+          color: #60a5fa;
+        }
+      }
+
+      .icon-wrapper {
+        position: relative;
+        cursor: pointer;
+        padding: 0.5rem;
+        color: #e5e7eb;
+
+        &:hover {
+          color: #60a5fa;
+        }
+
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+
+        .notification-badge {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          background-color: #9c0808;
+          color: white;
+          font-size: 0.75rem;
+          padding: 2px 6px;
+          border-radius: 9999px;
+          min-width: 18px;
+          text-align: center;
+        }
+
+        button {
+          background: none;
+          border: none;
+          color: inherit;
+          cursor: pointer;
+          padding: 0;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .user-profile {
+        display: flex;
+        align-items: center;
+        padding: 0.25rem;
+        border-radius: 8px;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: #374151;
+        }
+
+        .avatar {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .search-bar {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .navbar-content {
+      a,
+      span,
+      .logo {
+        font-size: 1.5rem;
+      }
+      .icon-wrapper svg {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+      .user-profile .avatar {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 10px;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

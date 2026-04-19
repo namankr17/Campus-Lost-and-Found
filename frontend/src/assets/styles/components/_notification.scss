@@ -1,0 +1,136 @@
+.notification-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: -10px;
+  width: 300px;
+  background-color: #1f2937;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+  .notification-header {
+    padding: 1rem;
+    border-bottom: 1px solid #374151;
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #e5e7eb;
+    }
+  }
+
+  .notification-list {
+    max-height: 400px;
+    overflow-y: auto;
+
+    .notification-item {
+      padding: 1rem;
+      border-bottom: 1px solid #374151;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      transition: background-color 0.2s ease;
+
+      &.unread {
+        background-color: #2d3748;
+        border-left: 3px solid #60a5fa;
+
+        .notification-content {
+          p {
+            color: #fff;
+
+            &.notification-comment {
+              color: #e5e7eb;
+            }
+          }
+
+          .notification-time {
+            color: #9ca3af;
+          }
+        }
+      }
+
+      &:hover {
+        background: #374151;
+      }
+
+      .notification-content {
+        flex: 1;
+        margin-right: 1rem;
+
+        p {
+          margin: 0;
+          font-size: 0.875rem;
+          color: #e5e7eb;
+
+          strong {
+            color: #60a5fa;
+          }
+
+          &.notification-comment {
+            color: #9ca3af;
+            margin-top: 0.5rem;
+          }
+        }
+
+        .notification-time {
+          font-size: 0.75rem;
+          color: #6b7280;
+          display: block;
+          margin-top: 0.5rem;
+        }
+      }
+
+      .delete-notification {
+        background: none;
+        border: none;
+        color: #9ca3af;
+        cursor: pointer;
+        padding: 0.25rem;
+
+        &:hover {
+          color: #ef4444;
+        }
+
+        svg {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+
+    .loading,
+    .no-notifications {
+      padding: 1rem;
+      text-align: center;
+      color: #9ca3af;
+    }
+  }
+
+  .notification-list::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .notification-list::-webkit-scrollbar-track {
+    background: #374151;
+  }
+
+  .notification-list::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 3px;
+  }
+}
+
+.notification-container {
+  position: relative;
+}
+
+.notification-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
