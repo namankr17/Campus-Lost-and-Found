@@ -32,48 +32,6 @@ A web-based platform designed to help students and staff report, search, and rec
 - Role-based access (Admin/User)
 - Token verification middleware
 
-### API Routes
-
-#### Auth Routes
-
-- `POST /api/auth/register` - Register new user (with optional profile picture)
-- `POST /api/auth/login` - User login
-
-#### User Routes
-
-- `GET /api/users/:id` - Get user profile
-- `PUT /api/users/:id` - Update user profile
-- `PUT /api/users/:id/profile-picture` - Update profile picture
-
-#### Upload Routes
-
-- `POST /api/upload/profile` - Upload profile picture
-- `POST /api/upload/post` - Upload post images (max 3)
-
-#### Post Routes
-
-- `GET /api/posts` - Get all posts
-- `POST /api/posts` - Create new post with images
-- `PUT /api/posts/:id` - Update post and images
-- `DELETE /api/posts/:id` - Delete post and cleanup images
-
-#### Comment Routes
-
-- `POST /api/posts/:id/comments` - Add comment
-- `DELETE /api/posts/:id/comments/:commentId` - Delete comment
-
-#### Admin Routes
-
-- `GET /api/admin/users` - Get all users
-- `GET /api/admin/stats` - Get statistics
-- `POST /api/admin/create` - Create new admin
-- `DELETE /api/admin/users/:id` - Delete user and cleanup associated images
-
-#### Notification Routes
-
-- `GET /api/notifications/user/:id` - Get user's notifications
-- `PUT /api/notifications/user/:id/viewed` - Mark notifications as viewed
-- `DELETE /api/notifications/:id` - Delete specific notification
 
 ### Database Models
 
