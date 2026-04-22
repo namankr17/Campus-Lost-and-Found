@@ -2,7 +2,7 @@
 
 ## Overview
 
-A full-stack application for managing lost and found items. Users can post items they've lost or found, interact through comments, and help reunite items with their owners.
+A full-stack  web application for managing lost and found items. Users can post items they've lost or found, interact through comments, and help reunite items with their owners.
 
 ## Backend Implementation
 
